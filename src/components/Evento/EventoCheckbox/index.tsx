@@ -1,4 +1,3 @@
-
 import { IEvento } from '../../../interfaces/IEvento';
 import useAtualizarEvento from '../../../state/hooks/useAtualizarEventos';
 
@@ -9,7 +8,6 @@ const EventoCheckbox: React.FC<{
 
   const alterarStatus = () => {
     const eventoAlterado = { ...evento, completo: !evento.completo };
-
     alterarEvento(eventoAlterado);
   };
 

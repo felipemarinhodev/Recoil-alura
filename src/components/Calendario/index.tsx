@@ -42,18 +42,18 @@ const Calendario: React.FC = () => {
     kalendEventoInalterado: CalendarEvent,
     kalendEventoAtualizado: CalendarEvent
   ) => {
-    const evento = eventos.find(
-      (evt) => evt.descricao === kalendEventoAtualizado.summary
-    );
+      const evento = eventos.find(
+        (evt) => evt.descricao === kalendEventoAtualizado.summary
+      );
 
-    if (evento) {
-      const eventoAtualizado = {
-        ...evento,
-      };
-      eventoAtualizado.inicio = new Date(kalendEventoAtualizado.startAt);
-      eventoAtualizado.fim = new Date(kalendEventoAtualizado.endAt);
-      atualizaEvento(eventoAtualizado);
-    }
+      if (evento) {
+        const eventoAtualizado = {
+          ...evento,
+        };
+        eventoAtualizado.inicio = new Date(kalendEventoAtualizado.startAt);
+        eventoAtualizado.fim = new Date(kalendEventoAtualizado.endAt);
+        atualizaEvento(eventoAtualizado);
+      }
   };
 
   return (
